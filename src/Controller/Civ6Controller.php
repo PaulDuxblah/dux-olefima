@@ -5,13 +5,13 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class GameController extends Controller
+class Civ6Controller extends Controller
 {
     /**
-     * @Route("/", name="game")
+     * @Route("/civ6", name="civ6")
      */
     public function index()
     {
-        return $this->render('game/index.html.twig');
+        return $this->render('civ6/index.html.twig');
     }
 }

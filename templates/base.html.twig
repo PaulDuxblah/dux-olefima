@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dux'olefima | {% block title %}{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/lol">League of Legends</a></li>
+        <li><a href="/civ6">Civilization 6</a></li>
+      </ul>
+    </nav>
+
+    {% block body %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+  </body>
 </html>
