@@ -16,9 +16,26 @@ class LolController extends Controller
     }
 
     /**
+     * @Route("/lol/champions", name="lolChampions")
+     */
+    public function champions()
+    {
+        $files = scandir(__DIR__ . '/../../templates/lol/champions');
+        $names = [];
+        foreach ($files as $key => $file) {
+            if ($file === '.' || $file === '..' || $file === 'base.html.twig') continue;
+            $names[] = explode('.', $file)[0];
+        }
+
+        return $this->render('lol/champions.html.twig', [
+            'names' => $names
+        ]);
+    }
+
+    /**
      * @Route("/lol/champions/{name}", name="lolChampion")
      */
-    public function champions($name)
+    public function champion($name)
     {
         return $this->render('lol/champions/' . $name . '.html.twig');
     }

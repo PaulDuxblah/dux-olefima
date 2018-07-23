@@ -14,4 +14,29 @@ class Civ6Controller extends Controller
     {
         return $this->render('civ6/index.html.twig');
     }
+
+    /**
+     * @Route("/civ6/leaders", name="civ6Leaders")
+     */
+    public function leaders()
+    {
+        $files = scandir(__DIR__ . '/../../templates/civ6/leaders');
+        $names = [];
+        foreach ($files as $key => $file) {
+            if ($file === '.' || $file === '..' || $file === 'base.html.twig') continue;
+            $names[] = explode('.', $file)[0];
+        }
+
+        return $this->render('civ6/leaders.html.twig', [
+            'names' => $names
+        ]);
+    }
+
+    /**
+     * @Route("/civ6/leaders/{name}", name="civ6Leader")
+     */
+    public function leader($name)
+    {
+        return $this->render('civ6/leaders/' . $name . '.html.twig');
+    }
 }
