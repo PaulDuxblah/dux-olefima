@@ -3,17 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>Dux'olefima | {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
     {% block stylesheets %}{% endblock %}
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="/lol">League of Legends</a></li>
-        <li><a href="/civ6">Civilization 6</a></li>
-      </ul>
-    </nav>
-
     {% block body %}{% endblock %}
     {% block javascripts %}{% endblock %}
+    <script src="{{ asset('build/app.js') }}"></script>
   </body>
 </html>

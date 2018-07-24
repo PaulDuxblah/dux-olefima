@@ -12,7 +12,7 @@ class Civ6Controller extends Controller
      */
     public function index()
     {
-        return $this->render('civ6/index.html.twig');
+        return $this->render('game/civ6/index.html.twig');
     }
 
     /**
@@ -20,14 +20,14 @@ class Civ6Controller extends Controller
      */
     public function leaders()
     {
-        $files = scandir(__DIR__ . '/../../templates/civ6/leaders');
+        $files = scandir(__DIR__ . '/../../templates/game/civ6/leaders');
         $names = [];
         foreach ($files as $key => $file) {
             if ($file === '.' || $file === '..' || $file === 'base.html.twig') continue;
             $names[] = explode('.', $file)[0];
         }
 
-        return $this->render('civ6/leaders.html.twig', [
+        return $this->render('game/civ6/leaders.html.twig', [
             'names' => $names
         ]);
     }
@@ -37,6 +37,6 @@ class Civ6Controller extends Controller
      */
     public function leader($name)
     {
-        return $this->render('civ6/leaders/' . $name . '.html.twig');
+        return $this->render('game/civ6/leaders/' . $name . '.html.twig');
     }
 }

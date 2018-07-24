@@ -1,0 +1,1 @@
+require('../images/alistar.jpg');

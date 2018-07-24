@@ -12,7 +12,7 @@ class LolController extends Controller
      */
     public function index()
     {
-        return $this->render('lol/index.html.twig');
+        return $this->render('game/lol/index.html.twig');
     }
 
     /**
@@ -20,14 +20,14 @@ class LolController extends Controller
      */
     public function champions()
     {
-        $files = scandir(__DIR__ . '/../../templates/lol/champions');
+        $files = scandir(__DIR__ . '/../../templates/game/lol/champions');
         $names = [];
         foreach ($files as $key => $file) {
             if ($file === '.' || $file === '..' || $file === 'base.html.twig') continue;
             $names[] = explode('.', $file)[0];
         }
 
-        return $this->render('lol/champions.html.twig', [
+        return $this->render('game/lol/champions.html.twig', [
             'names' => $names
         ]);
     }
@@ -37,6 +37,6 @@ class LolController extends Controller
      */
     public function champion($name)
     {
-        return $this->render('lol/champions/' . $name . '.html.twig');
+        return $this->render('game/lol/champions/' . $name . '.html.twig');
     }
 }
