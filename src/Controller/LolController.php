@@ -5,7 +5,7 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class LolController extends Controller
+class LolController extends GameController
 {
     /**
      * @Route("/lol", name="lol")
@@ -21,14 +21,14 @@ class LolController extends Controller
     public function champions()
     {
         $files = scandir(__DIR__ . '/../../templates/game/lol/champions');
-        $names = [];
+        $items = [];
         foreach ($files as $key => $file) {
             if ($file === '.' || $file === '..' || $file === 'base.html.twig') continue;
-            $names[] = explode('.', $file)[0];
+            $items[] = static::getChampionNavItem(explode('.', $file)[0]);
         }
 
         return $this->render('game/lol/champions.html.twig', [
-            'names' => $names
+            'items' => $items
         ]);
     }
 
@@ -38,5 +38,14 @@ class LolController extends Controller
     public function champion($name)
     {
         return $this->render('game/lol/champions/' . $name . '.html.twig');
+    }
+
+    public static function getChampionNavItem($name)
+    {
+        return [
+            'title' => $name,
+            'path' => '/lol/champions/' . $name,
+            'image' => 'lol/champions/' . $name . '.jpg'
+        ];
     }
 }

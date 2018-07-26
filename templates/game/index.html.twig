@@ -3,18 +3,23 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-  <div class="nav">
-    <div class="item">
-      <a href="/lol">
-        <img src="{{ asset('build/assets/images/alistar.jpg') }}" />
-        <span>League of Legends</span>
-      </a>
-    </div>
-    <div class="item">
-      <a href="/civ6">
-        <img src="{{ asset('build/assets/images/catherinedemedici.jpeg') }}" />
-        <span>Civilization 6</span>
-      </a>
-    </div>
+  <div class="games">
+    {%
+      include '/partials/nav.html.twig'
+      with {
+        'items': [
+          {
+            'title': 'League of Legends',
+            'image': 'alistar.jpg',
+            'path': '/lol'
+          },
+          {
+            'title': 'Civilization 6',
+            'image': 'catherinedemedici.jpeg',
+            'path': '/civ6'
+          }
+        ]
+      }
+    %}
   </div>
 {% endblock %}

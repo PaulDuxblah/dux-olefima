@@ -3,5 +3,18 @@
 {% block title %}LoL{% endblock %}
 
 {% block body %}
-  <a href="{{ path(app.request.get('_route')) }}/champions">champions</a>
+  <div class="lol">
+    {%
+      include '/partials/nav.html.twig'
+      with {
+        'items': [
+          {
+            'title': 'Champions',
+            'image': 'lol/champions.png',
+            'path': path(app.request.get('_route')) ~ '/champions'
+          }
+        ]
+      }
+    %}
+  </div>
 {% endblock %}

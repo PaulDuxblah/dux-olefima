@@ -3,9 +3,10 @@
 {% block title %}LoL{% endblock %}
 
 {% block body %}
-  <ul>
-    {% for name in names %}
-      <li><a href="{{ path(app.request.get('_route')) }}/{{ name }}">{{ name }}</a></li>
-    {% endfor %}
-  </ul>
+  <div class="champions">
+    {%
+      include '/partials/nav.html.twig'
+      with { 'items': items }
+    %}
+  </div>
 {% endblock %}

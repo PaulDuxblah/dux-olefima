@@ -3,5 +3,9 @@
 {% block title %}Civ 6{% endblock %}
 
 {% block body %}
-  <a href="{{ path(app.request.get('_route')) }}/leaders">Leaders</a>
+  <div class="nav">
+    <div class="item">
+      <a href="{{ path(app.request.get('_route')) }}/leaders">Leaders</a>
+    </div>
+  </div>
 {% endblock %}
