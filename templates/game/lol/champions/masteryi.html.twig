@@ -4,4 +4,38 @@
 
 {% block body %}
   <h2>Master Yi</h2>
+
+  {%
+    include '/partials/lol/skills.html.twig'
+    with {
+      'champions': 'masteryi',
+      'skills': [
+        {
+          'name': 'Coup double',
+          'button': 'passive',
+          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
+        },
+        {
+          'name': 'Coup double',
+          'button': 'q',
+          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
+        },
+        {
+          'name': 'Coup double',
+          'button': 'w',
+          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
+        },
+        {
+          'name': 'Coup double',
+          'button': 'e',
+          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
+        },
+        {
+          'name': 'Coup double',
+          'button': 'r',
+          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
+        },
+      ]
+    }
+  %}
 {% endblock %}

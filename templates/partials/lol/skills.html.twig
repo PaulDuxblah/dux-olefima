@@ -1,0 +1,17 @@
+{% block stylesheets %}
+  <link href="{{ asset('build/css/partials/skills.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('build/js/partials/skills.js') }}"></script>
+{% endblock %}
+
+<div class="skills">
+  <div class="tabs">
+  </div>
+  {% for skill in skills %}
+    <div class="tab">{{ skill.button }}</div>
+    {% skill.champion = champion %}
+    {% include '/partials/lol/skill.html.twig' with { 'skill': skill } %}
+  {% endfor %}
+</div>
