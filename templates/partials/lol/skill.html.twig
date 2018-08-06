@@ -1,5 +1,7 @@
-<div class="skill">
-  <img src="{{ asset('build/assets/images/lol/champions/' ~ skill.champion ~ '/' ~ skill.button) }}" />
-  <h2>{{ skill.name }}</h2>
-  <p>{{ skill.description }}</p>
+<div class="skill" id="{{ skill.button }}">
+  <h2>
+    <img src="{{ asset('build/assets/images/lol/champions/' ~ champion ~ '/' ~ skill.button ~ '.png') }}" />
+    {{ skill.name }}
+  </h2>
+  <p>{{ skill.description | raw }}</p>
 </div>

@@ -1,11 +1,24 @@
 .skills {
   display: flex;
 
+  .nav {
+    .tab {
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
   .skill {
-    display: flex;
+    display: none;
 
-    img {
+    h1 {
+      flex-direction: row;
 
+      img {
+
+      }
     }
   }
 }

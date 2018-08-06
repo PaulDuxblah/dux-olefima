@@ -8,30 +8,33 @@
   {%
     include '/partials/lol/skills.html.twig'
     with {
-      'champions': 'masteryi',
+      'champion': 'masteryi',
       'skills': [
         {
           'name': 'Coup double',
           'button': 'passive',
+          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera <span class="ratio ad">la moitié de ses dégâts d\'attaque</span>, applique les effets à l\'impact et peut être un coup critique.'
+        },
+        {
+          'name': 'Assaut éclair',
+          'button': 'a',
+          'description': 'Sort en cible. Maître Yi devient inciblable et inflige 25 / 60 / 95 / 130 / 165 <span class="ratio ad">+100%</span> <span class="ad">dégâts physiques</span>.<br>
+          Les dégâts peuvent causer des dégâts critiques, infligeant <span class="ratio ad">+60%</span> <span class="ratio crit">+30%</span> <span class="ad">dégâts physiques</span> supplémentaires.<br>
+          Les monstres subissent 75 / 100 / 125 / 150 / 175 <span class="ad">dégâts physiques</span> supplémentaires.<br>
+          Le délai de récupération de cette compétence est réduit d\'une seconde à chaque attaque.'
+        },
+        {
+          'name': 'Méditation',
+          'button': 'z',
           'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
         },
         {
-          'name': 'Coup double',
-          'button': 'q',
-          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
-        },
-        {
-          'name': 'Coup double',
-          'button': 'w',
-          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
-        },
-        {
-          'name': 'Coup double',
+          'name': 'Style Wuju',
           'button': 'e',
           'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
         },
         {
-          'name': 'Coup double',
+          'name': 'Highlander',
           'button': 'r',
           'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
         },
