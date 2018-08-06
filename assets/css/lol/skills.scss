@@ -1,0 +1,37 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+
+  .nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    flex: 0;
+
+    .tab {
+      display: flex;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .skill {
+    display: none;
+    flex-direction: column;
+
+    h1 {
+      flex-direction: row;
+
+      img {
+
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,14 +1,15 @@
 (() => {
   var skills = document.getElementsByClassName('skills')[0];
-  var nav = skills.getElementsByClassName('nav')[0];
-  var tabs = nav.getElementsByClassName('tab');
+  var skillList = skills.getElementsByClassName('skill');
+  skillList.namedItem('passive').classList.add('flex');
 
-  Array.from(tabs).forEach(function(tab) {
+  Array.from(skills.getElementsByClassName('nav')[0].getElementsByClassName('tab'))
+  .forEach(function(tab) {
     tab.addEventListener('click', function() {
-      Array.from(skills.getElementsByClassName('skill')).forEach(function(skill) {
-        skill.style.display = 'none';
+      Array.from(skillList).forEach(function(skill) {
+        skill.classList.remove('flex');
       });
-      skills.getElementsByClassName('skill').namedItem(tab.id.substring(4)).style.display = 'flex';
+      skillList.namedItem(tab.id.substring(4)).classList.add('flex');
     });
   });
 })();

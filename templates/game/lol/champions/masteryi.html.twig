@@ -13,30 +13,42 @@
         {
           'name': 'Coup double',
           'button': 'passive',
-          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera <span class="ratio ad">la moitié de ses dégâts d\'attaque</span>, applique les effets à l\'impact et peut être un coup critique.'
+          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque inflige <span class="ratio ad">la moitié de son AD</span>, applique les effets à l\'impact et peut être un coup critique.'
         },
         {
           'name': 'Assaut éclair',
           'button': 'a',
-          'description': 'Sort en cible. Maître Yi devient inciblable et inflige 25 / 60 / 95 / 130 / 165 <span class="ratio ad">+100%</span> <span class="ad">dégâts physiques</span>.<br>
-          Les dégâts peuvent causer des dégâts critiques, infligeant <span class="ratio ad">+60%</span> <span class="ratio crit">+30%</span> <span class="ad">dégâts physiques</span> supplémentaires.<br>
+          'cost': '50 / 55 / 60 / 65 / 70',
+          'cooldown': '18 / 17 / 16 / 15 / 14',
+          'description': 'Sort en cible. Maître Yi devient inciblable et inflige 25 / 60 / 95 / 130 / 165 <span class="ratio ad">+100% AD</span> <span class="ad">dégâts physiques</span>.<br>
+          Les dégâts peuvent causer des dégâts critiques, infligeant <span class="ratio ad">+60% AD</span> <span class="ad">dégâts physiques</span> supplémentaires.<br>
           Les monstres subissent 75 / 100 / 125 / 150 / 175 <span class="ad">dégâts physiques</span> supplémentaires.<br>
           Le délai de récupération de cette compétence est réduit d\'une seconde à chaque attaque.'
         },
         {
           'name': 'Méditation',
           'button': 'z',
-          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
+          'cost': '50',
+          'cooldown': '35',
+          'description': 'Maître Yi canalise pendant 4 secondes. Chaque seconde, il se soigne de 30 / 50 / 70 / 90 / 110 <span class="ratio ap">+25%</span> PVs par seconde, augmenté de 1% par 1% de vie manquante, et gagne une charge de Double attaque (P).<br>
+          Pendant la méditation, les dégâts subis sont réduits de 50 / 55 / 60 / 65 / 70% (montant réduit de moitié pour les dégâts de tourelle) et le temps actif restant de Style Wuju (E) et de Highlander (R) sont mis en pause.'
         },
         {
           'name': 'Style Wuju',
           'button': 'e',
-          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
+          'cost': '1',
+          'cooldown': '18 / 17 / 16 / 15 / 14',
+          'passive': 'Augmente l\'AD bonus de Maître Yi de 10%.',
+          'description': 'Pendant 5 secondes, les attaques de Maître Yi infligent 18 / 26 / 34 / 42 / 50 <span class="ratio ad">+35% AD bonus</span> <span class="true">dégâts bruts</span>.<br>
+          Pendant que ce sort est en train de se recharger, Maître yi perd la propriété passive de Style Wuju (E).'
         },
         {
           'name': 'Highlander',
           'button': 'r',
-          'description': 'Toutes les 4 attaques, la prochaine attaque de Maître Yi sera une double attaque. La deuxième attaque infligera la moitié de ses dégâts d\'attaque, applique les effets à l\'impact et peut être un coup critique.'
+          'cost': '100',
+          'cooldown': '85',
+          'passive': 'Maître Yi recharge 70% du délai de récupération de ses compétences de base lorsqu\'il tue ou a une assistance sur un champion ennemi.',
+          'description': 'Pendant 7 secondes, Maître Yi gagne 25 / 35 / 45% de vitesse de déplacement, 30 / 55 / 80% de vitesse d\'attaque et devient immunisé aux ralentissements. Tant que le sort est actif, tuer ou avoir une assistance sur un champion ennemi augmente la durée du sort de 7 secondes.'
         },
       ]
     }

@@ -3,5 +3,22 @@
     <img src="{{ asset('build/assets/images/lol/champions/' ~ champion ~ '/' ~ skill.button ~ '.png') }}" />
     {{ skill.name }}
   </h2>
-  <p>{{ skill.description | raw }}</p>
+
+  {% if skill.cost is defined %}
+    <p class="cost">
+      <span class="bold">Coût:</span> {{ skill.cost }} {{ skill.costType is defined ? skill.costType : 'mana' }}
+    </p>
+  {% endif %}
+
+  {% if skill.cooldown is defined %}
+    <p class="cooldown">
+      <span class="bold">Récupération:</span> {{ skill.cooldown }}s
+    </p>
+  {% endif %}
+
+  {% if skill.passive is defined %}
+    <p class="passive"><span class="bold">Passive:</span> {{ skill.passive }}s</p>
+  {% endif %}
+
+  <p class="description">{{ skill.passive is defined ? '<span class="bold">Active:</span> ' : '' }} {{ skill.description | raw }}</p>
 </div>
