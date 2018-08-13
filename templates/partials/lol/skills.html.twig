@@ -1,12 +1,15 @@
 {% block stylesheets %}
   <link href="{{ asset('build/css/partials/skills.css') }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
 {% endblock %}
 
 {% block javascripts %}
     <script type="text/javascript" src="{{ asset('build/js/partials/skills.js') }}"></script>
 {% endblock %}
 
-<div class="skills">
+<article class="skills">
+  <h3>Compétences</h3>
+
   <div class="nav">
     {% for skill in skills %}
       <div class="tab {{ skill.button is same as('passive') ? 'active' : '' }}" id="tab-{{ skill.button }}">
@@ -18,4 +21,4 @@
   {% for skill in skills %}
     {% include '/partials/lol/skill.html.twig' with { 'skill': skill, 'champion': champion } %}
   {% endfor %}
-</div>
+</article>

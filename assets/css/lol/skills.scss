@@ -4,23 +4,47 @@
 
   .nav {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     height: 40px;
     flex: 0;
+    width: 40%;
+    margin-left: auto;
 
     .tab {
       display: flex;
+      flex-grow: 1;
+      flex-basis: 0;
+      justify-content: center;
+      align-items: center;
+
+      height: 2em;
+      text-transform: uppercase;
+      font-family: 'Jua', sans-serif;
+      font-size: 2em;
+      border: 1px black solid;
 
       &:hover {
         cursor: pointer;
+      }
+
+      &.active {
+        background-color: black;
+        color: white;
       }
     }
   }
 
   .skill {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
+
+    video {
+      width: 720px;
+      height: 405px;
+    }
+
+    > * {
+      border: 1px solid black;
+    }
 
     h1 {
       flex-direction: row;
