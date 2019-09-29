@@ -8,12 +8,12 @@
 // JS
 require('./images.js');
 require('./lol/main.js');
+require('./lol/partials/skills.js');
 
 // CSS
 import '../css/app.scss';
 import '../css/main.scss';
 import '../css/partials/nav.scss';
-import '../css/partials/lol/champion.scss';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 // const $ = require('jquery');

@@ -23,9 +23,6 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('app', './assets/js/app.js')
-    //.addEntry('page1', './assets/js/page1.js')
-    //.addEntry('page2', './assets/js/page2.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -52,7 +49,6 @@ Encore
 
     // uncomment to define the assets of the project
     .addEntry('app', './assets/js/app.js')
-    .addStyleEntry('css/app', './assets/css/app.scss')
 
     // enables @babel/preset-env polyfills
     .configureBabel(() => {}, {
@@ -66,6 +62,11 @@ Encore
     .copyFiles({
         from: './assets/images',
         to: 'images/[path][name].[hash:8].[ext]',
+    })
+
+    .copyFiles({
+        from: './assets/js',
+        to: 'js/[path][name].[ext]',
     })
 
     // uncomment if you use TypeScript

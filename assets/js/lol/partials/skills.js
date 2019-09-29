@@ -1,3 +1,5 @@
+
+  console.log('zenfujebfeb')
 (() => {
   var skills = document.getElementsByClassName('skills')[0];
   var tabs = skills.getElementsByClassName('nav')[0].getElementsByClassName('tab');

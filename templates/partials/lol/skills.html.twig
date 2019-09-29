@@ -12,7 +12,7 @@
 
   <div class="nav">
     {% for skill in skills %}
-      <div class="tab {{ skill.button is same as('passive') ? 'active' : '' }}" id="tab-{{ skill.button }}">
+      <div class="tab {{ skill.button is same as('p') ? 'active' : '' }}" id="tab-{{ skill.button }}">
         {{ skill.button }}
       </div>
     {% endfor %}
