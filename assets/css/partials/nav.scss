@@ -6,6 +6,7 @@
   align-self: center;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   .item {
     a {
@@ -21,8 +22,7 @@
 
       img {
         animation: nav-item-out 0.25s forwards;
-        width: 200px;
-        height: 200px;
+        object-fit: cover;
         border-radius: 50%;
       }
     }

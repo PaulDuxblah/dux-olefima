@@ -3,9 +3,9 @@
 namespace App\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class GameController extends Controller
+class GameController extends AbstractController
 {
     /**
      * @Route("/", name="game")
