@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}LoL{% endblock %}
+{% block title %}| LoL{% endblock %}
 
 {% block body %}
   <div class="lol">
@@ -10,7 +10,7 @@
         'items': [
           {
             'title': 'Champions',
-            'image': 'lol/champions.png',
+            'image': 'champions.png',
             'path': path(app.request.get('_route')) ~ '/champions'
           }
         ]
